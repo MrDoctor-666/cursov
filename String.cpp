@@ -20,7 +20,7 @@ void GetStringFile( String* s, fstream* f)
 	while ((*s).a[i-1] != '\n')
 	{
 		*f >> (*s).a[i];
-		if ((*s).a[i] == '\n') break;
+		if ((*s).a[i] == '\n' || (*f).eof()) break;
 		i++;
 	}
 	(*s).length = i;
